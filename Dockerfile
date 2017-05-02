@@ -30,5 +30,4 @@ COPY . .
  
 # Define the script we want run once the container boots
 # Use the "exec" form of CMD so our script shuts down gracefully on SIGTERM (i.e. `docker stop`)
-RUN chmod +x config/containers/app_cmd.sh
 CMD [ "config/containers/app_cmd.sh" ]
