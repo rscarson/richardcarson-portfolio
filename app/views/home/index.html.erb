@@ -1,0 +1,60 @@
+<div class="background mountains">
+  <a id="top"></a>
+  <div class="page">
+    <%= render 'me' %>
+  </div>
+
+  <a id="projects"></a>
+  <div class="page">
+   <%= render 'projects' %>
+  </div>
+
+  <a id="about"></a>
+  <div class="page">
+    <%= render 'about' %>
+  </div>
+</div>
+
+<!-- Modal -->
+<form class="form-horizontal" action="/contact" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Contact Me</h4>
+        </div>
+        <div class="modal-body">
+          <!-- Name -->
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group">
+            <label for="body" class="col-sm-2 control-label">Message</label>
+            <div class="col-sm-10">
+              <textarea name="body" id="body" class="form-control" rows="5"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <input type="submit" class="btn btn-primary" data-dismiss="modal" value="Send" />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+  - 2.3.3
+
+services:
+  - mysql
+
+before_install:
+  - mysql -e 'CREATE DATABASE richardcarson_ca_test;'
+
+install: "bundle install"
+
+script:
+  - rails db:migrate RAILS_ENV=test
+  - rails test

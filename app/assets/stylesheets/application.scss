@@ -1,0 +1,168 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "bootstrap-social";
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'PT Sans', sans-serif;
+  color: #222;
+}
+
+.mountains {
+  background-image: image-url("mountains.jpg") !important;
+}
+
+.night {
+  background-image: image-url("night.jpg") !important;
+}
+
+.background {
+  width: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page {
+  padding-top: 52px;
+  min-height: 100vh;
+
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.btn {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2 {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h1 {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 7em;
+  margin: 0;
+}
+
+h2 {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 3.5em;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin: 0;
+}
+
+h5 {
+  border-bottom: 1px solid #666;
+  margin-bottom: 2px;
+}
+
+a, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.wide {
+  margin: 25px 0;
+  padding: 15px;
+  text-align: left;
+
+  background: #FFF;
+  background: rgba(255, 255, 255, 0.65);
+  width: 100%;
+}
+
+.small {
+  font-size: 1.1em;
+}
+
+.wide a {
+  text-decoration: underline;
+}
+
+.mininav-container {
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.7em;
+  color: #FFF;
+}
+
+.btn-nav {
+  margin: 25px;
+  z-index: 10;
+
+  position: fixed;
+  right: 0;
+}
+
+.alert-scroll {
+  color: #888;
+  position: absolute;
+  width: 100%;
+  bottom: 25px;
+  text-align: center;
+
+  font-size: 3em;
+  font-weight: bold;
+}
+
+@media (max-width: $screen-sm) {
+  h1 {
+    font-size: 5vh;
+  }
+
+  h2 {
+    font-size: 3vh;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .small {
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #999;
+    border-radius: 25px;
+    font-size: 1.2em;
+  }
+}
