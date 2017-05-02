@@ -33,9 +33,6 @@ db:
   volumes:
     - "./sito/db/:/var/lib/mysql"
 
-  ports:
-    - "3306:3306"
-
   restart: always
   environment:
     - MYSQL_RANDOM_ROOT_PASSWORD=yes
