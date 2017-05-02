@@ -10,10 +10,6 @@ app:
   # rely on the RAILS_ENV value of the host machine
   environment:
     RAILS_ENV: $RAILS_ENV
-  
-  # makes the web container aware of the app container
-  links:
-    - app
  
   # makes the app container aware of the DB container
   links:
@@ -31,9 +27,10 @@ db:
   image: mysql
 
   volumes:
-    - "./sito/db/:/var/lib/mysql"
+    - "./sito/db/:/var/lib/mysql" 
 
   restart: always
+
   environment:
     - MYSQL_RANDOM_ROOT_PASSWORD=yes
 # service configuration for our web server
