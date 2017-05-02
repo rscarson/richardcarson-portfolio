@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <title>Richard Carson - Portfolio</title>
+    <title><%= @settings['about']['name'] %> - Portfolio</title>
     <%= csrf_meta_tags %>
 
-    <meta name="author" content="Richard Carson" />
-    <meta name="keywords" content="Richard Carson, Software, Developer, Lavendeux" />
-    <meta name="description" content="A Carleton software engineering graduate and Algonquin alumni with 9 years of industry experience. Combines the leadership skills and proactive problem-solving of engineering with excellence in programming and software design. Proven reliability and enthusiasm towards the design, development, and deployment of software." />
+    <meta name="author" content="<%= @settings['about']['name'] %>" />
+    <meta name="keywords" content="<%= @settings['about']['keywords'] %>" />
+    <meta name="description" content="<%= @settings['about']['desc'] %>" />
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>

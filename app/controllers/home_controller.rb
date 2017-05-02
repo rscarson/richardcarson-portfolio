@@ -1,5 +1,8 @@
+require 'json'
+
 class HomeController < ApplicationController
   def index
+    @settings = settings;
   end
 
   def contact
@@ -8,5 +11,10 @@ class HomeController < ApplicationController
       params[:email],
       params[:body]
     ).deliver_later
+  end
+
+  def settings
+    file = File.read('config/settings.json')
+    return JSON.parse(file)
   end
 end

@@ -1,0 +1,48 @@
+{
+  "about": {
+    "name": "Richard Carson",
+    "desc": "A Carleton software engineering graduate and Algonquin alumni with 9 years of industry experience. Combines the leadership skills and proactive problem-solving of engineering with excellence in programming and software design. Proven reliability and enthusiasm towards the design, development, and deployment of software.",
+    "keywords": "Richard Carson, Software, Developer, Lavendeux",
+
+    "github": "https://github.com/rscarson",
+    "linkedin": "https://www.linkedin.com/in/richard-carson-6b765524/",
+    "resume": "/Richard%20Carson%20-%20Resume.pdf",
+
+    "education": [
+      {"name": "Bachelor of Software Engineering (Carleton University)", "start": 2013, "end": 2017},
+      {"name": "Computer Science Engineering, Computing Science (Algonquin College)", "start": 2010, "end": 2013}
+    ],
+
+    "work": [
+      {"name": "Software Developer (Secure Technologies International)", "start": 2009},
+      {"name": "Systems Administrator (Secure Technologies International)", "start": 2008, "end": 2009}
+    ]
+  },
+
+  "projects": [
+    {
+      "name": "Lavendeux",
+      "desc": ["Lavendeux inlines calculating, programming and testing utilities into your favourite text editor."],
+      "github": "https://github.com/rscarson/Lavendeux",
+      "web": "http://rscarson.github.io/Lavendeux/"
+    },
+    {
+      "name": "GBTIS",
+      "desc": [
+        "A gesture-controlled guestbook which leverages the Microsoft Kinect to capture and interpret a user's handwriting as they write in the air.",
+        "The captured text is then sent to a web application where they can be viewed and managed."
+      ],
+      "github": "https://github.com/adambatson/gbtis",
+      "web": "https://github.com/adambatson/gbtisaas"
+    },
+    {
+      "name": "BiasDetector",
+      "desc": [
+        "A neural network designed to detect political bias in news articles.",
+        "This project is a work in progress, originally built for Carleton's COMP 4106"
+      ],
+      "github": "https://github.com/rscarson/BiasDetector",
+      "web": "http://www3.carleton.ca/calendars/ugrad/0910/courses/COMP/4106.html"
+    }
+  ]
+}

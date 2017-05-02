@@ -7,19 +7,21 @@
     </a>
   </div>
    <div class="media-body">
-    <h4 class="media-heading">Richard Carson</h4>
-    <p>A Carleton software engineering graduate and Algonquin alumni with 9 years of industry experience. Combines the leadership skills and proactive problem-solving of engineering with excellence in programming and software design. Proven reliability and enthusiasm towards the design, development, and deployment of software.</p>
+    <h4 class="media-heading"><%= @settings['about']['name'] %></h4>
+    <p><%= @settings['about']['desc'] %></p>
 
     <h5>Education</h5>
     <ul>
-      <li><strong>Bachelor of Software Engineering (Carleton University) <small class="text-muted">2013 - 2017</small></strong></li>
-      <li><strong>Computer Science Engineering, Computing Science (Algonquin College) <small class="text-muted">2010 - 2013</small></strong></li>
+    <% @settings['about']['education'].each do |education| -%>
+      <li><strong><%= education['name'] %> <small class="text-muted"><%= education['start'] %> - <% if education.has_key? 'end' %><%= education['end'] %><% else %>Present<% end%></small></strong></li>
+    <% end -%>
     </ul>
 
     <h5>Work</h5>
     <ul>
-      <li><strong>Software Developer (Secure Technologies International) <small class="text-muted">2009 - Present</small></strong></li>
-      <li><strong>Systems Administrator (Secure Technologies International) <small class="text-muted">2008 - 2009</small></strong></li>
+    <% @settings['about']['work'].each do |work| -%>
+      <li><strong><%= work['name'] %> <small class="text-muted"><%= work['start'] %> - <% if work.has_key? 'end' %><%= work['end'] %><% else %>Present<% end%></small></strong></li>
+    <% end -%>
     </ul>
 
     <h3>&nbsp;</h3>

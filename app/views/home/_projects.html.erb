@@ -1,42 +1,22 @@
 <h2>Projects</h2>
 
-<div class="wide small">
-  <h3>Lavendeux</h3>
-  <p>Lavendeux inlines calculating, programming and testing utilities into your favourite text editor.</p>
-  
-  <a class="btn btn-sm btn-social-icon btn-github">
-    <span class="fa fa-github"></span>
-  </a>
-  
-  <a class="btn btn-sm btn-social-icon btn-linkedin">
-    <span class="glyphicon glyphicon-globe"></span>
-  </a>
-</div>
+<% @settings['projects'].each do |project| -%>
+  <div class="wide small">
+    <h3><%= project['name'] %></h3>
+    <% project['desc'].each do |desc| -%>
+      <p><%= desc %></p>
+    <% end %>
 
-<div class="wide small">
-  <h3>GBTIS</h3>
-  <p>A gesture-controlled guestbook which leverages the Microsoft Kinect to capture and interpret a user's handwriting as they write in the air.</p>
-  <p>The captured text is then sent to a <a href="#">web application</a> where they can be viewed and managed.</p>
-  
-  <a class="btn btn-sm btn-social-icon btn-github">
-    <span class="fa fa-github"></span>
-  </a>
-  
-  <a class="btn btn-sm btn-social-icon btn-linkedin">
-    <span class="glyphicon glyphicon-globe"></span>
-  </a>
-</div>
-
-<div class="wide small">
-  <h3>BiasDetector</h3>
-  <p>A neural network designed to detect political bias in news articles.</p>
-  <p>This project is a work in progress, originally built for Carleton's <a href="#">COMP 4106</a></p>
-  
-  <a class="btn btn-sm btn-social-icon btn-github">
-    <span class="fa fa-github"></span>
-  </a>
-  
-  <a class="btn btn-sm btn-social-icon btn-linkedin">
-    <span class="glyphicon glyphicon-globe"></span>
-  </a>
-</div>
+    <% if project.has_key? 'github' %>
+      <a class="btn btn-sm btn-social-icon btn-github" target="_blank" rel="noopener" href="<%= project['github'] %>">
+        <span class="fa fa-github"></span>
+      </a>
+    <% end %>
+    
+    <% if project.has_key? 'web' %>
+      <a class="btn btn-sm btn-social-icon btn-linkedin" target="_blank" rel="noopener" href="<%= project['web'] %>">
+        <span class="glyphicon glyphicon-globe"></span>
+      </a>
+    <% end %>
+  </div>
+<% end -%>
