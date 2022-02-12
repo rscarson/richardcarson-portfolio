@@ -90,7 +90,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.11.5-x86-mingw32)
       racc (~> 1.4)
-    puma (3.12.6)
+    puma (4.3.11)
+      nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
     rack-test (0.6.3)
@@ -167,7 +168,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   mysql2 (>= 0.3.18, < 0.5)
-  puma (~> 3.12)
+  puma (~> 4.3)
   rails (~> 5.0.2)
   sass-rails (~> 5.0)
   turbolinks (~> 5)
